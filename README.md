@@ -1,6 +1,11 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
+
+In this example we learn how to manage and give input feedback, and how to build a custom hook to manage all inputs too.
+
+![react_example5](https://media.giphy.com/media/ly9nuTEQZSb8WjZgai/giphy.gif)
 
 ## Available Scripts
 
