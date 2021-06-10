@@ -34,7 +34,7 @@ const BasicForm = (props) => {
   const submitFormHandler = (event) => {
     event.preventDefault();
 
-    if (!isFirstNameValid || isLastNameValid || isEmailValid) {
+    if (!formIsValid) {
       return;
     }
     console.log(firstName);
@@ -66,7 +66,9 @@ const BasicForm = (props) => {
             value={firstName}
             onBlur={firstNameTouchedHandler}
           />
-          {firstNameHasError && <p> first name must not be empty</p>}
+          {firstNameHasError && (
+            <p className="error-text"> first name must not be empty</p>
+          )}
         </div>
         <div className={lastNameInputClasses}>
           <label htmlFor="last-name">Last Name</label>
@@ -77,7 +79,9 @@ const BasicForm = (props) => {
             value={lastName}
             onBlur={lastNameTouchedHandler}
           />
-          {lastNameHasError && <p> last name must not be empty</p>}
+          {lastNameHasError && (
+            <p className="error-text"> last name must not be empty</p>
+          )}
         </div>
       </div>
       <div className={emailInputClasses}>
@@ -89,7 +93,9 @@ const BasicForm = (props) => {
           value={email}
           onBlur={emailTouchedHandler}
         />
-        {emailHasError && <p> enter a valid email format</p>}
+        {emailHasError && (
+          <p className="error-text"> enter a valid email format</p>
+        )}
       </div>
       <div className="form-actions">
         <button disabled={!formIsValid} type="submit">
